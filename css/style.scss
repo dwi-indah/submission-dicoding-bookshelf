@@ -1,0 +1,226 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0; 
+}
+
+html {
+    font-size: 14px;
+    @media(min-width: 800px) {
+        font-size: 16px;
+    }
+}
+
+body {
+    color: #3A1E54;
+    margin: 0;
+    padding: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit; 
+}
+
+.container {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    &.-xl {
+        max-width: 1000px;
+    }
+}
+
+.header {
+    background: #eeeeee;
+    text-align: center;
+    padding: 24px;
+}
+
+.footer {
+    background-color: #3A1E54;
+    color: #eeeeee;
+    padding: 16px;
+    text-align: center;
+}
+
+main {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.box {
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    border: 1px solid #3A1E54;
+}
+
+.p-24 {
+    padding: 24px;
+}
+
+.mtp {
+    margin-top: 40px;
+}
+
+.flex-center {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    @media(min-width: 800px) {
+        flex-direction: row;
+    }
+    & > div {
+        min-height: 300px;
+        max-height: 800px;
+        overflow-y: scroll;
+        @media(min-width: 800px) {
+            width: calc((100% - 40px) / 2);
+        }
+    }
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 16px;
+    font-weight: 800;
+}
+
+.form {
+    &-book {
+        display: flex;
+        flex-direction: column;
+        .button-save {
+            align-self: end;
+        }
+    }
+    &-search {
+        display: flex;
+        flex-direction: column;
+        .form-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            input {
+                width: 100% !important;
+            }
+        }
+        .button-save {
+            align-self: flex-end;
+        }
+    }
+    &-group {
+        margin-bottom: 16px;
+        label, input {
+            width: 100%;
+            display: block;
+            color: #666666;
+        }
+        input {
+            padding: 10px 16px;
+            border-radius: 8px;
+            -webkit-border-radius: 8px;
+            -moz-border-radius: 8px;
+            -ms-border-radius: 8px;
+            -o-border-radius: 8px;
+            outline: none;
+            border: 1px solid #666666;
+            &:active {
+                border: 1px solid #3A1E54;
+            }
+            &::placeholder {
+                color: #999999;
+            }
+        }
+        label {
+            margin-bottom: 4px;
+            font-weight: 600;
+        }
+        &.-inline, &.-radio {
+            label, input {
+                display: inline-block;
+                width: auto;
+            }
+        }
+        &.-radio {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-weight: 400 !important;
+        }
+    }
+}
+
+button, .button {
+    outline: none;
+    border: none;
+    padding: 12px 16px;
+    border-radius: 8px;
+    color: #fff;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    &-save {
+        background-color: #0C6EFD;
+        width: 100px;
+        &:hover {
+            background-color: darken(#0C6EFD, 10%);
+        }
+    }
+    &-delete {
+        background-color: #DC3444;
+        margin-left: 8px;
+        &:hover {
+            background-color: darken(#DC3444, 100%);
+        }
+    }
+    &-unfinish {
+        background-color: #198753;
+        &:hover {
+            background-color: darken(#198753, 10%);
+        }
+    }
+    &-finish {
+        background-color: #FD7E13;
+        &:hover {
+            background-color: darken(#FD7E13, 10%);
+        }
+    }
+}
+
+.book {
+    padding: 16px;
+    background: #f6f3fc;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    margin-bottom: 24px;
+    &-title {
+        margin-bottom: 16px;
+    }
+    &-author, &-year {
+        margin-bottom: 8px;
+    }
+    &-action {
+        display: flex;
+        justify-content: end;
+        margin-top: 10px;
+    }
+}

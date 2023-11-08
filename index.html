@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshelf Apps</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <h1>Bookshelf Apps</h1>
+    </header>
+    
+    <main>
+        <section class="container box p-24">
+            <form action="#" class="form-book" id="book-form">
+                <h2 class="title">Masukan Data Buku</h2>
+                <div class="form-group">
+                    <label for="book-title">Judul Buku</label>
+                    <input type="text" name="book-title" id="book-title" placeholder="Masukan Judul" required>
+                </div>
+                <div class="form-group">
+                    <label for="book-author">Penulis</label>
+                    <input type="text" name="book-author" id="book-author" placeholder="Masukan Penulis" required>
+                </div>
+                <div class="form-group">
+                    <label for="book-year">Tahun</label>
+                    <input type="number" name="book-year" id="book-year" placeholder="Masukan Tahun" required>
+                </div>
+                <div class="form-group">
+                    <label>Status Buku</label>
+                    <label class="form-group -radio">
+                        <input type="radio" name="book-status" value="true" required>
+                        Selesai Dibaca
+                      </label>
+                      <label class="form-group -radio">
+                        <input type="radio" name="book-status" value="false">
+                        Belum Selesai
+                      </label>
+                </div>
+                <button class="button-save">Simpan</button>
+            </form>
+        </section>
+        <section class="container box box p-24 mtp">
+            <h2 class="title">Cari Buku</h2>
+            <form action="#" class="form-search" id="book-search">
+                <div class="form-group -inline">
+                    <label for="book-search">Judul</label>
+                    <input type="seaech" name="book-search" id="book-search-title" oninput="searchBook(event)">
+                </div>
+            </form>
+        </section>
+        <section class="container -xl flex-center mtp">
+            <div class="box p-24">
+                <h2 class="title">Belum Selesai Dibaca</h2>
+                <div class="book-wrapper" id="book-uncomplete"></div>
+            </div>
+            <div class="box p-24">
+                <h2 class="title">Selesai Dibaca</h2>
+                <div class="book-wrapper" id="book-complete"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">Made with <strong>Love</strong> from <strong>Tangerang</strong> </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
